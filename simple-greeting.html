@@ -1,0 +1,40 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-input/paper-input.html">
+
+<dom-module id="simple-greeting">
+
+
+    <template>
+
+        <style>
+            /* local DOM styles go here */
+            
+            :host {
+                display: inline-block;
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
+
+        <!-- local DOM goes here -->
+        <h1>Hi there, <span>{{name}}</span></h1>
+        <paper-input label="Enter your name" value="{{name::input}}"></paper-input>
+    </template>
+
+    <script>
+        
+        //Call "Polymer" to start this element.
+        Polymer({
+            is: 'simple-greeting',
+            properties: {
+
+                //Create a property to hold the users name.
+                name: {
+                    type: String
+                }
+
+            }
+        });
+        
+    </script>
+
+</dom-module>
